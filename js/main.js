@@ -129,12 +129,133 @@
 //   });
 // }
 //------------------------------セレクトボックスの操作--------------------------------
-{
+// {
   
-  document.querySelector('button') .addEventListener('click', () => {
-    const li = document.createElement('li');
-    const color = document.querySelector('select');
-    li.textContent = `${color.value} - ${color.selectedIndex}`;//ここが分からん
-    document.querySelector('ul').appendChild(li);
+//   document.querySelector('button') .addEventListener('click', () => {
+//     const li = document.createElement('li');
+//     const color = document.querySelector('select');
+//     li.textContent = `${color.value} - ${color.selectedIndex}`;//ここが分からん
+//     document.querySelector('ul').appendChild(li);
+//   });
+// }
+
+//------------------------------ラジオボタンの操作--------------------------------
+// {
+  
+//   document.querySelector('button') .addEventListener('click', () => {
+//     const colors = document.querySelectorAll('input');
+//     let selectedColor; //選択した色の値
+
+//     colors.forEach(color => {
+//       if (color.checked === true) {
+//         selectedColor = color.value;
+//       }
+//     });
+
+//     const li = document.createElement('li');//要素の追加
+//     li.textContent = selectedColor;//要素の中身(valueで指定した値)
+//     document.querySelector('ul').appendChild(li);//ulにliを追加
+//   });
+// }
+//------------------------------ラジオボタンの操作--------------------------------
+// {
+  
+//   document.querySelector('button') .addEventListener('click', () => {
+//     const colors = document.querySelectorAll('input');
+//     let selectedColor; //選択した色の値
+
+//     colors.forEach(color => {
+//       if (color.checked === true) {
+//         selectedColor = color.value;
+//       }
+//     });
+
+//     const li = document.createElement('li');//要素の追加
+//     li.textContent = selectedColor;//要素の中身(valueで指定した値)
+//     document.querySelector('ul').appendChild(li);//ulにliを追加
+//   });
+// }
+//------------------------------ラジオボタンの操作--------------------------------
+// {
+  
+//   document.querySelector('button') .addEventListener('click', () => {
+//     const colors = document.querySelectorAll('input');
+//     let selectedColor; //選択した色の値
+
+//     colors.forEach(color => {
+//       if (color.checked === true) {
+//         selectedColor = color.value;
+//       }
+//     });
+
+//     const li = document.createElement('li');//要素の追加
+//     li.textContent = selectedColor;//要素の中身(valueで指定した値)
+//     document.querySelector('ul').appendChild(li);//ulにliを追加
+//   });
+// }
+//------------------------------チェックボックスの操作--------------------------------
+// {
+  
+//   document.querySelector('button') .addEventListener('click', () => {
+//     const colors = document.querySelectorAll('input');
+//     const selectedColors = [];
+
+//     colors.forEach(color => {
+//       if (color.checked === true) {
+//         selectedColors.push(color.value);
+//       }
+//     });
+    
+//     const li = document.createElement('li');
+//     // li.textContent = selectedColors.join(',');
+//     li.textContent = selectedColors;
+//     document.querySelector('ul').appendChild(li);
+//   });
+// }
+//------------------------------いろいろなイベントを見てみよう--------------------------------
+// {
+//   document.querySelector('button').addEventListener('dblclick', () => {
+//     console.log('Double Clicked!');
+//   });
+
+//   // document.addEventListener('mousemove', e =>{//   <<<<マウスカーソルの座標の取得
+//   //   // console.log('moved!');
+//   //   console.log(e.clientX, e.clientY);
+//   // });
+//   document.addEventListener('keydown', e =>{//   <<<<キーの取得
+//     console.log(e.key);
+//   });
+// }
+//------------------------------フォームで使われるイベント--------------------------------
+// {
+//   const text = document.querySelector('textarea');
+
+//   // text.addEventListener('focus', () => {
+//   //   console.log('focus');
+//   // });
+//   // text.addEventListener('blur', () => {
+//   //   console.log('blur');
+//   // });
+//   text.addEventListener('input', () => { //更新された時
+//     // console.log('input');
+//     console.log(text.value.length);
+//   });
+//   text.addEventListener('change', () => { //更新が確定された時
+//     console.log('change');
+//   });
+// }
+//------------------------------フォームの送信--------------------------------
+// {
+//   document.querySelector('form').addEventListener('submit', e => {
+//     e.preventDefault();
+//     console.log('submit');
+//   });
+// }
+//------------------------------イベントの伝播--------------------------------
+{
+  document.querySelector('ul').addEventListener('click', e => {
+    if (e.target.nodeName === 'LI') {
+      e.target.classList.toggle('done');
+    }
   });
 }
